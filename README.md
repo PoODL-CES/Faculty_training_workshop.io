@@ -1,4 +1,4 @@
-# Faculty Training Workshop — PoODL × CES × IISc
+# Faculty Training Workshop — PoODL IISc
 
 Website for the **Faculty Training Workshop on Inculcating Conservation Thinking through Ecology and Evolution Education in India**.
 
