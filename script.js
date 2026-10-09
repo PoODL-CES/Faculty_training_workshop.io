@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     social: {
       icon: "◈",
-      title: "Social Selection",
+      title: "Social Evolution",
       description:
         "Explore how interactions among individuals can influence traits, behaviour and evolutionary outcomes.",
       counter: "06 / 09"
