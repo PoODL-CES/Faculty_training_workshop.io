@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelectorAll(".nav-links a");
 
+  const updateHeaderOnScroll = () => header?.classList.toggle("is-scrolled", window.scrollY > 12);
+  updateHeaderOnScroll();
+  window.addEventListener("scroll", updateHeaderOnScroll, { passive: true });
+
   // Mobile navigation
   menuToggle?.addEventListener("click", () => {
     const open = header.classList.toggle("menu-open");
