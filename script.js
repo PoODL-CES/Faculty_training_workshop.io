@@ -28,6 +28,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Faculty profile pop-ups
+  const facultyDialog = document.querySelector(".faculty-dialog");
+  const facultyName = document.getElementById("facultyDialogName");
+  const facultyBio = document.querySelector(".faculty-dialog-bio");
+  const facultyProfileLink = document.querySelector(".faculty-dialog-link");
+  const openFacultyProfile = card => {
+    if (!facultyDialog || !facultyName || !facultyBio || !facultyProfileLink) return;
+    facultyName.textContent = card.dataset.name;
+    facultyBio.textContent = card.dataset.bio;
+    facultyProfileLink.href = card.dataset.link;
+    facultyProfileLink.setAttribute("aria-label", `Visit ${card.dataset.name}'s profile or lab website`);
+    facultyDialog.showModal();
+  };
+
+  document.querySelectorAll(".faculty-card[data-name]").forEach(card => {
+    card.addEventListener("click", () => openFacultyProfile(card));
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openFacultyProfile(card);
+      }
+    });
+  });
+
+  facultyDialog?.querySelector(".dialog-close")?.addEventListener("click", () => facultyDialog.close());
+  facultyDialog?.addEventListener("click", event => {
+    if (event.target === facultyDialog) facultyDialog.close();
+  });
+
   // Scroll reveal
   const revealItems = document.querySelectorAll(".reveal");
 
