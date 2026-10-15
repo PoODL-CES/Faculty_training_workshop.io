@@ -930,6 +930,29 @@ h2 em {
   transition: all .45s var(--ease);
 }
 
+.faculty-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  opacity: .58;
+  filter: saturate(.72);
+  transition: transform .6s var(--ease), opacity .4s ease;
+}
+
+.faculty-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17,43,37,.08) 15%, rgba(17,43,37,.78) 100%);
+  pointer-events: none;
+}
+
+.faculty-card > :not(.faculty-photo) { z-index: 1; }
+.faculty-card:hover .faculty-photo { transform: scale(1.05); opacity: .82; }
+
 .faculty-card::before {
   content: "";
   position: absolute;
@@ -990,6 +1013,25 @@ h2 em {
   background: rgba(113,133,92,.22);
   border-color: rgba(244,241,232,.28);
 }
+
+.ces-about-section { background: var(--cream); }
+.ces-about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; align-items: start; }
+.ces-about-grid h2, .action-panel h2, .sponsors-inner h2 { font: 400 clamp(48px, 6vw, 78px)/.98 var(--serif); letter-spacing: -.04em; margin-top: 28px; }
+.ces-about-grid h2 em, .action-panel h2 em, .sponsors-inner h2 em { color: var(--moss); }
+.ces-about-copy { max-width: 560px; padding-top: 42px; font-size: 17px; line-height: 1.8; }
+.ces-about-copy p + p { margin-top: 20px; }
+.text-link, .outline-link { display: inline-flex; gap: 24px; align-items: center; margin-top: 22px; padding: 13px 0; border-bottom: 1px solid currentColor; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+.action-sections { background: var(--paper); }
+.action-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; padding: clamp(35px, 7vw, 90px); color: var(--cream); background: var(--forest); }
+.action-panel h2 { margin-bottom: 0; }
+.action-copy { align-self: center; color: rgba(244,241,232,.78); line-height: 1.8; max-width: 480px; }
+.outline-link { color: var(--cream); }
+.sponsors-section { background: #e9e9d9; }
+.sponsors-inner { text-align: center; }
+.sponsors-inner h2 { margin-bottom: 18px; }
+.sponsors-inner > p:not(.eyebrow) { color: var(--forest-2); }
+.sponsor-placeholders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
+.sponsor-placeholders span { min-height: 100px; display: grid; place-items: center; border: 1px dashed rgba(24,58,50,.35); color: var(--forest-2); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 
 /* Details */
 .details-section { background: var(--paper); }
@@ -1231,6 +1273,8 @@ h2 em {
     left: 24px;
     right: 24px;
     padding: 25px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
     background: var(--paper);
     border: 1px solid var(--line);
   }
@@ -1256,6 +1300,8 @@ h2 em {
   .details-side { border-left: 0; border-top: 1px solid rgba(244,241,232,.17); }
   .convenor-card { grid-template-columns: 110px 1fr; }
   .convenor-mark { display: none; }
+  .ces-about-grid, .action-panel { grid-template-columns: 1fr; gap: 25px; }
+  .ces-about-copy { padding-top: 0; }
 }
 
 @media (max-width: 620px) {
@@ -1311,6 +1357,7 @@ h2 em {
   .faculty-symbol { right: 18px; top: 17px; }
   .faculty-arrow { right: 17px; bottom: 19px; }
   .faculty-role { left: 20px; bottom: 74px; font-size: 7px; }
+  .sponsor-placeholders { grid-template-columns: 1fr; }
   .details-main { padding: 45px 28px; }
   .details-main h2 { margin: 70px 0 20px; font-size: 100px; }
   .details-side { padding: 25px 28px 45px; }
