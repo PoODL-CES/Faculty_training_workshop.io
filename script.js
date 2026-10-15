@@ -8,13 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
   menuToggle?.addEventListener("click", () => {
     const open = header.classList.toggle("menu-open");
     menuToggle.setAttribute("aria-expanded", open);
+    menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
   });
 
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
       header.classList.remove("menu-open");
       menuToggle?.setAttribute("aria-expanded", "false");
+      menuToggle?.setAttribute("aria-label", "Open navigation");
     });
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && header?.classList.contains("menu-open")) {
+      header.classList.remove("menu-open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+      menuToggle?.setAttribute("aria-label", "Open navigation");
+      menuToggle?.focus();
+    }
   });
 
   // Scroll reveal
