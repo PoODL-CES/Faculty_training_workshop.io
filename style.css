@@ -1084,6 +1084,7 @@ h2 em {
   }
 }
 
+
 .faculty-dialog {
   width: min(560px, calc(100% - 32px));
   max-height: min(80vh, 620px);
@@ -1178,8 +1179,23 @@ h2 em {
   padding: 65px 45px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  gap: 24px;
 }
+
+.workshop-logos {
+  min-height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 18px;
+  padding: 12px 18px;
+  border-radius: 3px;
+  background: #fff;
+}
+.poodl-logo { display: block; width: 128px; height: 128px; object-fit: contain; }
+.iisc-logo { display: block; width: min(190px, 48%); height: 140px; object-fit: contain; }
+.logo-divider { width: 1px; height: 80px; flex: 0 0 1px; background: rgba(24,58,50,.18); }
 
 .detail-row {
   padding: 25px 0;
@@ -1456,6 +1472,9 @@ h2 em {
   .calendar-weekdays span { font-size: 8px; }
   .schedule-item { grid-template-columns: 1fr; gap: 5px; }
   .details-side { padding: 25px 28px 45px; }
+  .workshop-logos { min-height: 140px; gap: 10px; padding: 10px; }
+  .poodl-logo { width: 105px; height: 105px; }
+  .iisc-logo { height: 118px; }
   .detail-row { grid-template-columns: 1fr; gap: 8px; }
   .convenor-card { grid-template-columns: 1fr; }
   .convenor-label { border-right: 0; border-bottom: 1px solid rgba(24,58,50,.15); }
