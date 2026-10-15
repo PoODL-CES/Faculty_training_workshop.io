@@ -1041,40 +1041,8 @@ h2 em {
 .sponsors-inner { text-align: center; }
 .sponsors-inner h2 { margin-bottom: 18px; }
 .sponsors-inner > p:not(.eyebrow) { color: var(--forest-2); }
-.sponsor-placeholders {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
-.sponsor-placeholders span {
-  min-height: 120px;
-  display: grid;
-  place-items: center;
-  padding: 12px;
-  border: 0;
-}
-
-.sponsor-placeholders a {
-  display: grid;
-  width: 100%;
-  min-height: 120px;
-  place-items: center;
-}
-
-.sponsor-placeholders img.sponsor-image {
-  display: block;
-  width: 100%;
-  height: 158px;
-  max-width: 350px;
-  object-fit: contain;
-
-}
-@media (max-width: 620px) {
-  .sponsor-placeholders {
-    grid-template-columns: 1fr;
-  }
-}
+.sponsor-placeholders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
+.sponsor-placeholders span { min-height: 100px; display: grid; place-items: center; border: 1px dashed rgba(24,58,50,.35); color: var(--forest-2); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 
 .faculty-dialog {
   width: min(560px, calc(100% - 32px));
@@ -1091,6 +1059,16 @@ h2 em {
 .faculty-dialog-bio { color: rgba(244,241,232,.78); font-size: 16px; line-height: 1.75; }
 .faculty-dialog .text-link { color: var(--cream); }
 .dialog-close { position: absolute; top: 14px; right: 18px; border: 0; color: var(--cream); background: transparent; font-size: 32px; cursor: pointer; }
+.schedule-dialog { width: min(760px, calc(100% - 28px)); max-height: 86vh; overflow-y: auto; margin: auto; padding: clamp(24px, 5vw, 48px); border: 1px solid rgba(244,241,232,.2); color: var(--cream); background: var(--forest); box-shadow: 0 25px 90px rgba(0,0,0,.4); }
+.schedule-dialog::backdrop { background: rgba(13,29,25,.75); backdrop-filter: blur(5px); }
+.schedule-dialog h2 { margin: 18px 40px 26px 0; font: 400 clamp(32px, 6vw, 50px)/1 var(--serif); }
+.schedule-list { display: grid; gap: 0; }
+.schedule-item { display: grid; grid-template-columns: 120px 1fr; gap: 18px; padding: 16px 0; border-top: 1px solid rgba(244,241,232,.16); }
+.schedule-time { color: #c6d0b9; font: 10px/1.5 var(--mono); }
+.schedule-activity { font-size: 15px; font-weight: 600; }
+.schedule-topic, .schedule-speaker { margin-top: 5px; color: rgba(244,241,232,.7); font-size: 13px; line-height: 1.55; white-space: pre-line; }
+.schedule-speaker { color: #c6d0b9; font-size: 11px; }
+.schedule-speaker:empty { display: none; }
 
 /* Details */
 .details-section { background: var(--paper); }
@@ -1125,6 +1103,20 @@ h2 em {
   letter-spacing: -.07em;
   margin: 80px 0 25px;
 }
+
+.details-main h2.calendar-title { position: relative; z-index: 1; margin: 38px 0 0; font: 400 clamp(38px, 5vw, 62px)/1 var(--serif); letter-spacing: -.04em; }
+.calendar-title em { font-size: .72em; }
+.details-description { position: relative; z-index: 1; margin-top: 14px; }
+.workshop-calendar { position: relative; z-index: 1; margin-top: 28px; max-width: 520px; }
+.calendar-weekdays, .calendar-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.calendar-weekdays { margin-bottom: 8px; }
+.calendar-weekdays span { text-align: center; color: rgba(244,241,232,.5); font: 9px var(--mono); text-transform: uppercase; }
+.calendar-days .calendar-empty { aspect-ratio: 1; }
+.calendar-day { aspect-ratio: 1; border: 1px solid rgba(244,241,232,.12); color: rgba(244,241,232,.38); background: transparent; font: 12px var(--mono); }
+.calendar-day.workshop-day { border-color: var(--moss); color: var(--forest); background: #c6d0b9; cursor: pointer; font-weight: 500; transition: transform .2s ease, background .2s ease; }
+.calendar-day.workshop-day:hover, .calendar-day.workshop-day:focus-visible { transform: translateY(-2px); background: var(--cream); outline: 2px solid var(--moss); outline-offset: 2px; }
+.calendar-hint { position: relative; z-index: 1; display: flex; align-items: center; gap: 9px; margin-top: 14px; color: rgba(244,241,232,.64); font: 9px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+.calendar-hint span { width: 8px; height: 8px; border-radius: 50%; background: #c6d0b9; }
 
 .details-main h2 em { color: var(--moss); }
 
@@ -1419,6 +1411,10 @@ h2 em {
   .sponsor-placeholders { grid-template-columns: 1fr; }
   .details-main { padding: 45px 28px; }
   .details-main h2 { margin: 70px 0 20px; font-size: 100px; }
+  .details-main h2.calendar-title { margin: 30px 0 0; font-size: 42px; }
+  .calendar-weekdays, .calendar-days { gap: 4px; }
+  .calendar-weekdays span { font-size: 8px; }
+  .schedule-item { grid-template-columns: 1fr; gap: 5px; }
   .details-side { padding: 25px 28px 45px; }
   .detail-row { grid-template-columns: 1fr; gap: 8px; }
   .convenor-card { grid-template-columns: 1fr; }
