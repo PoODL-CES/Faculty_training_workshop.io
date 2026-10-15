@@ -922,7 +922,8 @@ h2 em {
 }
 
 .faculty-card {
-  min-height: 265px;
+  height: 295px;
+  min-height: 0;
   padding: 28px;
   border: 1px solid rgba(244,241,232,.18);
   position: relative;
@@ -935,26 +936,33 @@ h2 em {
 
 .faculty-photo {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 14px;
+  left: 14px;
+  width: calc(100% - 28px);
+  height: 158px;
   object-fit: cover;
-  object-position: center 32%;
-  opacity: .58;
-  filter: saturate(.72);
-  transition: transform .6s var(--ease), opacity .4s ease;
+  object-position: center 35%;
+  opacity: 1;
+  filter: saturate(.88);
+  border-radius: 2px;
+  transition: filter .4s ease;
+  z-index: 0;
 }
 
 .faculty-card::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(17,43,37,.08) 15%, rgba(17,43,37,.78) 100%);
+  top: 14px;
+  left: 14px;
+  width: calc(100% - 28px);
+  height: 158px;
+  background: linear-gradient(180deg, rgba(17,43,37,0) 55%, rgba(17,43,37,.3) 100%);
   pointer-events: none;
+  z-index: 1;
 }
 
-.faculty-card > :not(.faculty-photo) { z-index: 1; }
-.faculty-card:hover .faculty-photo { transform: scale(1.05); opacity: .82; }
+.faculty-card > :not(.faculty-photo) { z-index: 2; }
+.faculty-card:hover .faculty-photo { filter: saturate(1); }
 
 .faculty-card::before {
   content: "";
@@ -969,14 +977,17 @@ h2 em {
 }
 
 .faculty-card:hover {
-  background: var(--cream);
-  color: var(--forest);
+  background: rgba(113,133,92,.16);
+  color: var(--cream);
   transform: translateY(-6px);
 }
 
 .faculty-card:hover::before { transform: scale(1.6); }
 
 .faculty-no {
+  position: absolute;
+  left: 20px;
+  top: 20px;
   font: 500 9px var(--mono);
   opacity: .5;
 }
@@ -995,6 +1006,7 @@ h2 em {
   left: 28px;
   font: 400 32px/.9 var(--serif);
   letter-spacing: -.035em;
+  z-index: 2;
 }
 
 .faculty-arrow {
@@ -1366,7 +1378,8 @@ h2 em {
   .activity-icon { grid-column: 3; grid-row: 1; }
   .leaf-drawing { display: none; }
   .faculty-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
-  .faculty-card { min-height: 220px; padding: 20px; }
+  .faculty-card { height: 245px; padding: 20px; }
+  .faculty-photo, .faculty-card::after { top: 11px; left: 11px; width: calc(100% - 22px); height: 125px; }
   .faculty-card h3 { left: 20px; bottom: 23px; font-size: 25px; }
   .faculty-symbol { right: 18px; top: 17px; }
   .faculty-arrow { right: 17px; bottom: 19px; }
