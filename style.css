@@ -717,14 +717,14 @@ h2 em {
 
 .learning-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
 .learning-card {
-  min-height: 490px;
+  min-height: 360px;
   border: 1px solid var(--line);
-  padding: 38px;
+  padding: 30px;
   position: relative;
   overflow: hidden;
   background: var(--cream);
@@ -1355,6 +1355,7 @@ h2 em {
 @media (max-width: 950px) {
   .nav-links { display: none; }
   .nav-cta { display: none; }
+
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -1363,14 +1364,21 @@ h2 em {
     background: none;
     cursor: pointer;
   }
+
   .menu-toggle span {
     width: 28px;
     height: 1px;
     background: var(--forest);
     transition: transform .3s ease;
   }
-  .site-header.menu-open .menu-toggle span:first-child { transform: translateY(3.5px) rotate(45deg); }
-  .site-header.menu-open .menu-toggle span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+
+  .site-header.menu-open .menu-toggle span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .site-header.menu-open .menu-toggle span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
 
   .site-header.menu-open .nav-links {
     position: absolute;
@@ -1387,6 +1395,7 @@ h2 em {
   }
 
   .hero-grid { grid-template-columns: 1fr; }
+
   .hero-art {
     position: absolute;
     width: 55%;
@@ -1394,6 +1403,7 @@ h2 em {
     opacity: .42;
     pointer-events: none;
   }
+
   .hero-copy { position: relative; z-index: 5; }
   .hero h1 { font-size: clamp(75px, 14vw, 125px); }
   .section-heading { grid-template-columns: 1fr; gap: 25px; }
@@ -1401,7 +1411,7 @@ h2 em {
   .topic-explorer { grid-template-columns: 1fr; }
   .topic-info { border-right: 0; border-bottom: 1px solid var(--line); padding: 45px; }
   .topic-map { min-height: 560px; }
-  .learning-grid { grid-template-columns: 1fr; }
+  .learning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .faculty-grid { grid-template-columns: repeat(2, 1fr); }
   .details-panel { grid-template-columns: 1fr; }
   .details-side { border-left: 0; border-top: 1px solid rgba(244,241,232,.17); }
@@ -1436,7 +1446,7 @@ h2 em {
   .statement-section { padding: 90px 0; }
   .statement { font-size: 40px; }
   .topic-info { padding: 38px 28px; }
-  .topic-info h3 { font-size: 34px; } 
+  .topic-info h3 { font-size: 34px; }
   .topic-map { min-height: 480px; }
   .ring-1 { width: 155px; height: 155px; }
   .ring-2 { width: 260px; height: 260px; }
@@ -1444,15 +1454,19 @@ h2 em {
   .center-node { width: 112px; height: 112px; font-size: 17px; }
   .topic-node { min-width: 73px; min-height: 38px; padding: 7px 8px; font-size: 7px; }
   .pos-genomics { left: 67%; }
-  .learning-card { min-height: 420px; padding: 28px; }
+
+  .learning-grid { grid-template-columns: 1fr; }
+  .learning-card { min-height: 340px; padding: 28px; }
   .molecule { transform: scale(.7) rotate(-22deg); right: -4%; top: 9%; }
   .terminal-art { left: 28px; top: 72px; }
+
   .activity-item {
     min-height: 190px;
     grid-template-columns: 45px 1fr 35px;
     gap: 12px;
     padding: 25px 0;
   }
+
   .activity-item h3 { font-size: 29px; }
   .activity-item p { grid-column: 2 / 4; margin-top: -5px; }
   .activity-icon { grid-column: 3; grid-row: 1; }
