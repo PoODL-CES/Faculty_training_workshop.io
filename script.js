@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.target === facultyDialog) facultyDialog.close();
   });
 
- // December 2026 workshop calendar and daily schedules
+
+// December 2026 workshop calendar and updated daily schedules
 const workshopSchedule = {
   7: [
     ["9:00–10:00 am", "Breakfast"],
@@ -83,9 +84,9 @@ const workshopSchedule = {
     ["4:30–6:00 pm", "Paper Discussion and Open Q&A",
       "Open discussion with participants; hands-on training module.",
       "Uma Ramakrishnan"],
-    ["6:00–8:00 pm", "Nocturnal Walk",
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   8: [
@@ -110,9 +111,9 @@ const workshopSchedule = {
     ["4:30–6:00 pm", "Interactive Session",
       "Developing biological collections: museums and herbarium; visiting CES labs.",
       "Sankara Rao · Thresiamma Varghese · All CES Faculty"],
-    ["6:00–8:00 pm", "Nocturnal Walk",
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   9: [
@@ -128,15 +129,15 @@ const workshopSchedule = {
       "Gaurav Baruah"],
     ["1:00–2:00 pm", "Lunch Break"],
     ["2:00–4:00 pm", "Hands-on and Paper Discussion",
-      "Continuation of applied exercises on Quantitative Genetics.",
+      "Continuation of the applied exercises on Quantitative Genetics.",
       "Gaurav Baruah"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:00–6:00 pm", "Open Q&A / Wrap-up",
       "Recap of the discussion and follow-up questions and answers.",
       "Gaurav Baruah"],
-    ["6:00–8:00 pm", "Nocturnal Walk",
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   10: [
@@ -158,9 +159,9 @@ const workshopSchedule = {
     ["4:30–6:00 pm", "Lab Visits",
       "Visits to CES laboratories.",
       "All CES Faculty"],
-    ["6:00–8:00 pm", "Nocturnal Walk",
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   11: [
@@ -168,23 +169,23 @@ const workshopSchedule = {
       "Bird watching on campus."],
     ["9:00–10:00 am", "Breakfast"],
     ["10:00–11:30 am", "Lecture",
-      "Macroecology — core concepts, methods and case studies.",
-      "Gopal Murali"],
+      "Introduction to the genomic world and its use in ecology and evolution.",
+      "Anubhab Khan"],
     ["11:30 am–12:00 noon", "Tea Break"],
     ["12:00 noon–1:00 pm", "Discussion",
-      "Discussion of key tools in Macroecology.",
-      "Gopal Murali"],
+      "Applied exercises and open discussion on Genomics.",
+      "Anubhab Khan"],
     ["1:00–2:00 pm", "Lunch Break"],
     ["2:15–4:00 pm", "Hands-on / Discussion",
-      "Applied exercises and open discussion on Macroecology.",
-      "Gopal Murali"],
+      "Introduction to NGS and hands-on practical training.",
+      "Anubhab Khan"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:30–6:00 pm", "Open Q&A / Wrap-up",
-      "Closing discussion.",
-      "Gopal Murali"],
-    ["6:00–8:00 pm", "Nocturnal Walk",
+      "Closing discussion with Anubhab Khan.",
+      "Anubhab Khan"],
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   12: [
@@ -206,9 +207,9 @@ const workshopSchedule = {
     ["4:30–6:30 pm", "Practical",
       "Hands-on training in Molecular Ecology.",
       "Praveen Karanth"],
-    ["6:30–8:00 pm", "Nocturnal Walk",
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   13: [
@@ -228,9 +229,9 @@ const workshopSchedule = {
       "Raghavendra Gadagkar"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:30–6:00 pm", "Industrial Session"],
-    ["6:00–8:00 pm", "Nocturnal Walk",
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   14: [
@@ -246,15 +247,15 @@ const workshopSchedule = {
       "All CES Faculty"],
     ["1:00–2:00 pm", "Lunch Break"],
     ["2:00–4:00 pm", "Paper Discussion and Open Q&A / Wrap-up",
-      "Applied exercises and open discussion on Sexual Selection; closing discussion.",
+      "Applied exercises and open discussion on Sexual Selection; closing discussion with Maria Thaker.",
       "Maria Thaker"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:30–6:00 pm", "Lecture",
       "Evolutionary Developmental Biology.",
       "L. S. Shashidhara"],
-    ["6:00–8:00 pm", "Nocturnal Walk",
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   15: [
@@ -274,37 +275,39 @@ const workshopSchedule = {
       "Vishwesha Guttal"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:30–6:00 pm", "Paper Discussion and Open Q&A / Wrap-up",
-      "Closing discussion.",
+      "Closing discussion with Vishwesha Guttal.",
       "Vishwesha Guttal"],
-    ["6:00–8:00 pm", "Nocturnal Walk",
+    ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ],
 
   16: [
     ["6:30–8:00 am", "Bird Walk",
       "Bird counting on campus."],
     ["9:00–10:00 am", "Breakfast"],
-    ["10:00–11:00 am", "Lecture",
-      "Introduction to the genomic world and its use in ecology and evolution.",
-      "Anubhab Khan"],
-    ["11:00–11:30 am", "Tea Break"],
-    ["11:30 am–1:00 pm", "Hands-on / Discussion",
-      "Applied exercises and open discussion on Genomics.",
-      "Anubhab Khan"],
+    ["10:00–11:30 am", "Lecture",
+      "Macroecology — core concepts, methods and case studies.",
+      "Gopal Murali"],
+    ["11:30 am–12:00 noon", "Tea Break"],
+    ["12:00 noon–1:00 pm", "Discussion",
+      "Discussion of key tools in Macroecology.",
+      "Gopal Murali"],
     ["1:00–2:00 pm", "Lunch Break"],
     ["2:00–4:00 pm", "Hands-on",
-      "Introduction to NGS and hands-on practical training.",
-      "Anubhab Khan"],
+      "Applied exercises and open discussion on Macroecology.",
+      "Gopal Murali"],
     ["4:00–4:30 pm", "High Tea"],
-    ["4:30–6:30 pm", "Open Discussion",
-      "Discussion and feedback from workshop participants; sharing their experiences."],
-    ["6:30–8:00 pm", "Closing Ceremony",
+    ["4:30–6:30 pm", "Open Q&A / Wrap-up",
+      "Closing discussion with Gopal Murali.",
+      "Gopal Murali"],
+    ["6:30–7:30 pm", "Closing Ceremony",
       "Closing remarks and feedback.",
       "Anubhab Khan · Kavita Isvaran · Kartik Shanker"],
-    ["8:00 pm onwards", "Dinner"]
+    ["7:30 pm onwards", "Dinner"]
   ]
 };
+
 
   const calendarDays = document.getElementById("calendarDays");
   const scheduleDialog = document.querySelector(".schedule-dialog");
