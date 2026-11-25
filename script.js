@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
 // December 2026 workshop calendar and updated daily schedules
 const workshopSchedule = {
   7: [
@@ -151,8 +150,8 @@ const workshopSchedule = {
       "Kartik Shanker"],
     ["11:30 am–12:00 noon", "Tea Break"],
     ["12:00 noon–1:00 pm", "Industrial Session",
-      "Session by KARKINOS.",
-      "KARKINOS"],
+      "Session by Thermo Fisher Scientific.",
+      "Thermo Fisher Scientific"],
     ["1:00–2:00 pm", "Lunch Break"],
     ["2:00–4:00 pm", "Hands-on / Paper Discussion",
       "Applied exercises and open discussion on Biogeography; recap and follow-up Q&A.",
@@ -230,9 +229,7 @@ const workshopSchedule = {
       "Discussion of key papers on Social Evolution and closing discussion.",
       "Raghavendra Gadagkar"],
     ["4:00–4:30 pm", "High Tea"],
-    ["4:30–5:30 pm", "Industrial Session",
-      "Industrial sessions by Thermo Fisher Scientific and Qiagen.",
-      "Thermo Fisher Scientific · Qiagen"],
+    ["4:30–6:00 pm", "Industrial Session"],
     ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
     ["7:30 pm onwards", "Dinner"]
