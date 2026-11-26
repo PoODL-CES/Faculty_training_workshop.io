@@ -13,13 +13,4 @@ Website for the **Faculty Training Workshop on Inculcating Conservation Thinking
 - `style.css` — visual design and responsive layout
 - `script.js` — interactions and animations
 
-## GitHub Pages
 
-1. Create a new GitHub repository.
-2. Upload `index.html`, `style.css`, `script.js`, and the `README.md`.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select `main` and `/ (root)`.
-6. Save.
-
-The site uses Google Fonts from the web, but the core layout and interactions are plain HTML/CSS/JavaScript with no framework.
