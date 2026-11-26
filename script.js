@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
 // December 2026 workshop calendar and updated daily schedules
 const workshopSchedule = {
   7: [
@@ -83,7 +84,7 @@ const workshopSchedule = {
       "Uma Ramakrishnan"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:30–6:00 pm", "Paper Discussion and Open Q&A",
-      "Open discussion with participants; hands-on training module.",
+      "Open discussion with participants; the module will provide hands-on training.",
       "Uma Ramakrishnan"],
     ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
@@ -110,8 +111,8 @@ const workshopSchedule = {
       "Meghna Krishnadas"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:30–6:00 pm", "Interactive Session",
-      "Developing biological collections: museums and herbarium; visiting CES labs.",
-      "Sankara Rao · Thresiamma Varghese · All CES Faculty"],
+      "Developing biological collections: museums; visiting CES labs.",
+      "Thresiamma Varghese · All CES Faculty"],
     ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
     ["7:30 pm onwards", "Dinner"]
@@ -134,7 +135,7 @@ const workshopSchedule = {
       "Gaurav Baruah"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:00–6:00 pm", "Open Q&A / Wrap-up",
-      "Recap of the discussion and follow-up questions and answers.",
+      "Recap of the discussion and follow-up Q&A.",
       "Gaurav Baruah"],
     ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
@@ -146,23 +147,21 @@ const workshopSchedule = {
       "Bird watching on campus."],
     ["9:00–10:00 am", "Breakfast"],
     ["10:00–11:30 am", "Lecture",
-      "Biogeography — core concepts, methods and case studies.",
+      "Diversity and Distribution — core concepts, methods and case studies.",
       "Kartik Shanker"],
     ["11:30 am–12:00 noon", "Tea Break"],
     ["12:00 noon–1:00 pm", "Industrial Session",
-      "Session by Thermo Fisher Scientific.",
-      "Thermo Fisher Scientific"],
+      "Industrial session by KARKINOS.",
+      "KARKINOS"],
     ["1:00–2:00 pm", "Lunch Break"],
     ["2:00–4:00 pm", "Hands-on / Paper Discussion",
-      "Applied exercises and open discussion on Biogeography; recap and follow-up Q&A.",
+      "Applied exercises and open discussion on Diversity and Distribution; recap and follow-up Q&A.",
       "Kartik Shanker"],
     ["4:00–4:30 pm", "High Tea"],
-    ["4:30–6:00 pm", "Lab Visits",
-      "Visits to CES laboratories.",
+    ["4:30–6:30 pm", "Lab Visits",
+      "CES lab visits.",
       "All CES Faculty"],
-    ["6:00–7:30 pm", "Nocturnal Walk",
-      "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
-    ["7:30 pm onwards", "Dinner"]
+    ["6:30 pm onwards", "Gala Dinner and Industrial Networking"]
   ],
 
   11: [
@@ -206,7 +205,7 @@ const workshopSchedule = {
       "Praveen Karanth"],
     ["4:00–4:30 pm", "High Tea"],
     ["4:30–6:30 pm", "Practical",
-      "Hands-on training in Molecular Ecology.",
+      "Hands-on Molecular Ecology.",
       "Praveen Karanth"],
     ["6:00–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
@@ -229,8 +228,10 @@ const workshopSchedule = {
       "Discussion of key papers on Social Evolution and closing discussion.",
       "Raghavendra Gadagkar"],
     ["4:00–4:30 pm", "High Tea"],
-    ["4:30–6:00 pm", "Industrial Session"],
-    ["6:00–7:30 pm", "Nocturnal Walk",
+    ["4:30–5:30 pm", "Industrial Session",
+      "Industrial sessions by Thermo Fisher Scientific and Qiagen.",
+      "Thermo Fisher Scientific · Qiagen"],
+    ["5:30–7:30 pm", "Nocturnal Walk",
       "An evening nature walk on campus to look for frogs, lorises, insects, bats and more."],
     ["7:30 pm onwards", "Dinner"]
   ],
@@ -243,9 +244,9 @@ const workshopSchedule = {
       "Sexual Selection — core concepts, methods and case studies.",
       "Maria Thaker"],
     ["11:30 am–12:00 noon", "Tea Break"],
-    ["12:00 noon–1:00 pm", "Open Interaction",
-      "Interactive session with all CES faculty.",
-      "All CES Faculty"],
+    ["12:00 noon–1:00 pm", "Interactive Session",
+      "Developing biological collections: herbarium.",
+      "Kolluri Sankara Rao"],
     ["1:00–2:00 pm", "Lunch Break"],
     ["2:00–4:00 pm", "Paper Discussion and Open Q&A / Wrap-up",
       "Applied exercises and open discussion on Sexual Selection; closing discussion with Maria Thaker.",
@@ -308,7 +309,6 @@ const workshopSchedule = {
     ["7:30 pm onwards", "Dinner"]
   ]
 };
-
 
   const calendarDays = document.getElementById("calendarDays");
   const scheduleDialog = document.querySelector(".schedule-dialog");
